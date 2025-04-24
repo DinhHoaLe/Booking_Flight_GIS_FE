@@ -12,6 +12,7 @@ import promotionReducer from "./Slide/promotionSlice";
 import infoUserReducer from "./Slide/infoUserSlice";
 import searchReducer from "./Slide/searchSlice";
 import compareReducer from "./Slide/compareSlice";
+import searchHotelReducer from "./Slide/searchHotelSlice";
 
 const store = configureStore({
   reducer: {
@@ -28,6 +29,7 @@ const store = configureStore({
     inforUser: infoUserReducer,
     searchSlice: searchReducer,
     compareSlice: compareReducer,
+    searchHotelSlice: searchHotelReducer,
   },
 });
 

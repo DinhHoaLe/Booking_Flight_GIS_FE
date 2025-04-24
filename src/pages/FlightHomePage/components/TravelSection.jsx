@@ -1,8 +1,10 @@
 import React from "react";
 import { Button } from "antd";
 import TravelSectionImg from "../components/img/Back ground.png";
+import { useNavigate } from "react-router-dom";
 
 const TravelSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full mt-5 flex flex-col  items-center">
       <div className="w-full m-5 flex justify-between items-center">
@@ -24,6 +26,7 @@ const TravelSection = () => {
             cursor: "pointer",
             fontWeight: 500,
           }}
+          onClick={() => navigate("/gis")}
         >
           See All
         </Button>

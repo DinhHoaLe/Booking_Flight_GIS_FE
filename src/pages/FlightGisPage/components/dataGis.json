@@ -1,0 +1,126 @@
+[
+    {
+      "airport": "Da Nang International Airport",
+      "lon": 108.20246209559326,
+      "lat": 16.057145348917995,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "Dreamy Sky Boutique Hotel",
+          "info": "Khách sạn 3 sao gần sân bay",
+          "lon":  108.20402411720359,
+          "lat":16.059470736014028,
+                "image": "/imgs/hotel.png"
+          
+        },
+        {
+          "name": "Khách sạn Samdi",
+          "info": "Khách sạn cao cấp với hồ bơi",
+          "lon": 108.20834935306823,
+          "lat": 16.05932360520237,
+                "image": "/imgs/hotel.png"
+        }
+      ]
+    },
+    {
+      "airport": "Cam Ranh International Airport",
+      "lon": 109.2183092736934,
+      "lat": 11.998938796636791,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "Khách sạn Mỹ Ca",
+          "info": "Khách sạn gần biển",
+          "lon": 109.1918213716103,
+          "lat": 11.989725733272886
+        },
+        {
+          "name": "Santorini Villa Cam Ranh Hotel",
+          "info": "Khách sạn 4 sao, view đẹp",
+          "lon": 109.19254966913445,
+          "lat": 11.982660912049246
+        }
+      ]
+    },
+    {
+      "airport": "Noi Bai International Airport",
+      "lon": 105.80244060434003,
+      "lat": 21.218204159014785,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "NEW SKY AIRPORT HOTEL",
+          "info": "Phục vụ 24/24, gần ga đến",
+          "lon": 105.78089732558746,
+          "lat": 21.215804580981686
+        },
+        {
+          "name": "Paragon Noi Bai Hotel and Pool",
+          "info": "Giá rẻ, tiện nghi",
+          "lon": 105.78355807686404,
+          "lat": 21.22080533547158
+        }
+      ]
+    },
+    {
+      "airport": "Tan Son Nhat International Airport",
+      "lon": 106.66387483859138,
+      "lat": 10.8159304452758,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "M Village Living Cửu Long",
+          "info": "5 phút đi bộ đến sân bay",
+          "lon": 106.66736090453541,
+          "lat": 10.810542932779407
+        },
+        {
+          "name": "B786 Airport Homestay",
+          "info": "Miễn phí đón tiễn",
+          "lon": 106.66691029343211,
+          "lat": 10.809531241931694
+        }
+      ]
+    },
+    {
+      "airport": "Phu Bai International Airport",
+      "lon":  107.70306103977671,
+      "lat": 16.396688826892802,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "Nhà Nghỉ Minh Quân",
+          "info": "Gần trung tâm TP Huế",
+          "lon": 107.70258023089704,
+          "lat": 16.388781190925823
+        },
+        {
+          "name": "Nhà Nghỉ An Bình",
+          "info": "Phục vụ chuyên nghiệp",
+          "lon":  107.68641483263399,
+          "lat": 16.408725066239118
+        }
+      ]
+    },
+    {
+      "airport": "Can Tho International Airport",
+      "lon": 105.71211320958008,
+      "lat": 10.080694328516572,
+      "image": "/imgs/location.png",
+      "hotels": [
+        {
+          "name": "Green Sunshine Homestay",
+          "info": "Nhà nghỉ bình dị có sân vườn, bếp chung, dịch vụ cho thuê xe đạp và Wi-Fi.",
+          "lon": 105.74844594856742,
+          "lat": 10.051158839380985
+        },
+        {
+          "name": "KARA HOMESTAY & CAFE",
+          "info": "Nằm ở Cần Thơ, Kara Homestay & Cafe có khu vườn, sân hiên, nhà hàng, cùng Wi-Fi miễn phí ở toàn bộ chỗ nghỉ. Với tiện nghi BBQ, chỗ nghỉ nằm cách Trung tâm thương mại Vincom Xuân Khánh 7.8 km",
+          "lon": 105.73757355787039,
+          "lat": 10.025521668495317
+        }
+      ]
+    }
+  ]
+  

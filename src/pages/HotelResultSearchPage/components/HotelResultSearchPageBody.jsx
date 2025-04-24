@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
-import FlightCard from "./FlightCard";
+// import HotelCard from "./FlightCard";
 import { Slider } from "@mui/material";
 import { Button } from "antd";
 import { Checkbox, Divider, List, Drawer, Space } from "antd";
+import {
+  SearchOutlined,
+  HeartOutlined,
+  RightOutlined,
+} from "@ant-design/icons";
 import { useLocation } from "react-router-dom";
-import { apiGet } from "../../../API/APIService";
+import { apiGet, apiPost } from "../../../API/APIService";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addFlight,
   clearFlights,
   removeFlight,
 } from "../../../Redux/Slide/compareSlice";
-import ReactGoogleMap from "../../components/ReactGoogleMap";
-import MyMap from "../../components/ReactLeafletMap";
-import FlightGisPageBody from "../../FlightGisPage/components/FlightGisPageBody";
-import FlightSearchPageGis from "./FlightSearchPageGis";
+import HotelCard from "./HotelCard";
 
 const CheckboxGroup = Checkbox.Group;
 const passengerRatingArr = [
@@ -39,7 +41,7 @@ const popularFiltersArr = [
   "Pet friendly",
 ];
 
-function FlightSearchBody() {
+function HotelResultSearchPageBody() {
   const [sliderValue, setSliderValue] = useState(0);
   const [checkedListPLane, setCheckedListPlane] = useState([]);
   const [checkedListPassenger, setCheckedListPassenger] = useState([]);
@@ -50,24 +52,16 @@ function FlightSearchBody() {
   const [open, setOpen] = useState(false);
   const [arrDrawer, setArrDrawer] = useState([]);
   const dispatch = useDispatch();
-  const callApi = async () => {
-    try {
-      const response = await apiGet("search-flight", location.state.findFlight);
-      setDataResult(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
-  const { searchData } = useSelector((state) => state?.searchSlice);
+  const { searchHotelData } = useSelector((state) => state?.searchHotelSlice);
+  const { resultHotelData } = useSelector((state) => state?.searchHotelSlice);
+
+  console.log(resultHotelData);
   const { compareFlights } = useSelector((state) => state?.compareSlice);
 
-  // console.log(searchData)
   useEffect(() => {
-    if (location.state) {
-      callApi();
-    }
-  }, [location?.state?.findFlight]);
+    setDataResult(resultHotelData);
+  }, [resultHotelData]);
 
   //Air Plane
   const checkAllPLane = airPlaneNameArr.length === checkedListPLane.length;
@@ -133,6 +127,8 @@ function FlightSearchBody() {
   const onClose = () => {
     setOpen(false);
   };
+
+  console.log(dataResult);
 
   return (
     <div className="min-w-[1224px]">
@@ -263,49 +259,39 @@ function FlightSearchBody() {
 
         <div className="border-[#F9F9F9] border-solid border"></div>
 
-        <div className="flex flex-col">
-          <div className="flex justify-between gap-5">
-            <div className="w-full">
-              <FlightSearchPageGis />
-            </div>
-            {/* <div className="w-full">
-              <FlightGisPageBody />
-            </div> */}
-          </div>
-          <div className="">
-            {dataResult && dataResult.length > 0 ? (
-              <List
-                itemLayout="horizontal"
-                dataSource={dataResult}
-                pagination={{
-                  pageSize: 5,
-                }}
-                renderItem={(item) =>
-                  item.returnInfo ? (
-                    item.returnInfo?.map((item2) => (
-                      <List.Item className="flex">
-                        <FlightCard
-                          dataSource={item}
-                          dataReturn={item2}
-                          openDrawer={setOpen}
-                        />
-                      </List.Item>
-                    ))
-                  ) : (
+        <div className="">
+          {dataResult && dataResult.length > 0 ? (
+            <List
+              itemLayout="horizontal"
+              dataSource={dataResult}
+              pagination={{
+                pageSize: 5,
+              }}
+              renderItem={(item) =>
+                item.returnInfo ? (
+                  item.returnInfo?.map((item2) => (
                     <List.Item className="flex">
-                      <FlightCard
+                      <HotelCard
                         dataSource={item}
-                        openDrawer={showDrawer}
-                        selected={setSelected}
+                        dataReturn={item2}
+                        openDrawer={setOpen}
                       />
                     </List.Item>
-                  )
-                }
-              />
-            ) : (
-              <div>Flight is not found! !</div>
-            )}
-          </div>
+                  ))
+                ) : (
+                  <List.Item className="flex">
+                    <HotelCard
+                      dataSource={item}
+                      openDrawer={showDrawer}
+                      selected={setSelected}
+                    />
+                  </List.Item>
+                )
+              }
+            />
+          ) : (
+            <div>Flight is not found! !</div>
+          )}
         </div>
       </div>
       <Drawer
@@ -378,4 +364,4 @@ function FlightSearchBody() {
   );
 }
 
-export default FlightSearchBody;
+export default HotelResultSearchPageBody;

@@ -1,0 +1,86 @@
+.flight-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  width: 898px;
+  height: 304px;
+  padding: 6px;
+}
+.flight-card div {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.top-head-line {
+  background-color: #efefef;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 4px;
+}
+
+.pm {
+  color: #a6a6a6;
+  margin-left: 2px;
+}
+
+.price-tag {
+  color: #4c9839;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.vacant-seat {
+  color: #4c9839;
+  font-weight: 400;
+  background-color: #e8f5e4;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.grey-card {
+  background-color: #efefef;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.blue-card {
+  color: #2f83b2;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.view-detail {
+  background-color: #07689f;
+  color: white;
+  border-radius: 4px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  width: 188.68px;
+}
+
+.flight-card-section {
+  margin: 6px;
+  width: 223px;
+}
+
+.time-button {
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  padding: 8px;
+
+  width: 117px;
+  margin-right: 6px;
+  color: #A6A6A6;
+}
+
+
+.country{
+  color: #07689F;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.o-clock{
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+}

@@ -125,7 +125,6 @@ export const apiPost = async (endpoint, body = {}) => {
     },
     body: JSON.stringify(body),
   });
-
   if (response.status === 401) {
     let refreshToken = localStorage.getItem("refreshToken");
     const refreshResponse = await fetch(`${BASE_URL}/refresh-token`, {
@@ -154,6 +153,21 @@ export const apiPost = async (endpoint, body = {}) => {
     }
   }
 
+  return handleResponse(response);
+};
+
+
+// Hàm POST ko Authorization
+export const apiPostWithoutAuthorization = async (endpoint, body = {}) => {
+  console.log(body)
+  const response = await fetch(`${BASE_URL}/${endpoint}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  console.log(response)
   return handleResponse(response);
 };
 

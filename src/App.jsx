@@ -58,26 +58,34 @@ import SupportListPage from "./pages/AccountPage/SupportListPage.jsx";
 import SupportDetailPage from "./pages/AccountPage/SupportDetailPage.jsx";
 import ReviewPage from "./pages/AccountPage/ReviewPage.jsx";
 import BookingSearchPage from "./pages/BookingSearchPage/BookingSearchPage.jsx";
+import HotelResultSearchPage from "./pages/HotelResultSearchPage/HotelResultSearchPage.jsx";
+import ArcgisMap from "./pages/components/ARGIS.jsx";
+import FlightGisPage from "./pages/FlightGisPage/FlightGisPage.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
   const [user, setUser] = useState("customer");
 
-  const adminRouter = createBrowserRouter([
-    {
-      path: "/",
-      // element: <HomePage />,
-      // errorElement: <ErrorPage />,
-      children: [],
-    },
-  ]);
-
   const customerRouter = createBrowserRouter([
-    {
+    // {
+    //   path: "/",
+    //   element: <HotelSearchPage />,
+    //   errorElement: <ErrorPage />,
+    //   children: [],
+    // },
+        {
       path: "/",
-      element: <HotelSearchPage />,
+      element: <FlightHomePage />,
       errorElement: <ErrorPage />,
       children: [],
+    },
+    {
+      path: "/hotel-search-page",
+      element: <HotelResultSearchPage />,
+    },
+    {
+      path: "/gis",
+      element: <FlightGisPage />,
     },
     {
       path: "/payment-detail/:roomId",
@@ -264,7 +272,7 @@ function App() {
       element: <HotelFavoriteListPage />,
     },
     {
-      path: "//hotel-confirm-page/:bookingId",
+      path: "/hotel-confirm-page/:bookingId",
       element: <ConfirmPage />,
     },
     {

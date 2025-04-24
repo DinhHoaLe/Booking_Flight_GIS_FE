@@ -46,8 +46,8 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               id="place"
               name="place"
               type="place"
-              onChange={formik.handleChange}
-              value={formik.values.place}
+              // onChange={formik.handleChange}
+              // value={formik.values.place}
             ></Input>
           </div>
           <div>
@@ -60,16 +60,16 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               id="city"
               name="city"
               min="1"
-              onChange={formik.handleChange}
-              value={formik.values.city}
+              // onChange={formik.handleChange}
+              // value={formik.values.city}
             />
 
             <div className="flex">
               <div className="error-field ">
                 {" "}
-                {formik.errors.city && (
+                {/* {formik.errors.city && (
                   <div>{formik.errors.city}</div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -83,16 +83,16 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               id="passengers"
               name="passengers"
               min="1"
-              onChange={formik.handleChange}
-              value={formik.values.passengers}
+              // onChange={formik.handleChange}
+              // value={formik.values.passengers}
             />
 
             <div className="flex">
               <div className="error-field ">
                 {" "}
-                {formik.errors.passengers && (
+                {/* {formik.errors.passengers && (
                   <div>{formik.errors.passengers}</div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -106,14 +106,14 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               disabled={disable ? "disabled" : ""}
               id="children"
               name="children"
-              onChange={formik.handleChange}
-              value={formik.values.children}
+              // onChange={formik.handleChange}
+              // value={formik.values.children}
             />
 
             <div className="flex">
               <div className="error-field ">
                 {" "}
-                {formik.errors.children && <div>{formik.errors.children}</div>}
+                {/* {formik.errors.children && <div>{formik.errors.children}</div>} */}
               </div>
             </div>
           </div>
@@ -125,14 +125,14 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               id="checkin"
               name="checkin"
               type="date"
-              onChange={formik.handleChange}
+              // onChange={formik.handleChange}
               value={formik.values.checkin}
             />
 
             <div className="flex">
               <div className="error-field ">
                 {" "}
-                {formik.errors.checkin && <div>{formik.errors.checkin}</div>}
+                {/* {formik.errors.checkin && <div>{formik.errors.checkin}</div>} */}
               </div>
             </div>
           </div>
@@ -145,13 +145,13 @@ function SearchPlaceInput({ formik, disable, ...props }) {
               id="checkout"
               name="checkout"
               type="date"
-              onChange={formik.handleChange}
-              value={formik.values.checkout}
+              // onChange={formik.handleChange}
+              // value={formik.values.checkout}
             />
             <div className="flex">
               <div className="error-field ">
                 {" "}
-                {formik.errors.checkout && <div>{formik.errors.checkout}</div>}
+                {/* {formik.errors.checkout && <div>{formik.errors.checkout}</div>} */}
               </div>
             </div>
           </div>

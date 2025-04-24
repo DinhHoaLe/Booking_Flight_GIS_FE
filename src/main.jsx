@@ -14,12 +14,10 @@ import store from "./Redux/Store.jsx";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TourSearchContextProvider>
       <GoogleOAuthProvider clientId="1031104764261-5kcn6354nd1tai108r56gm38c9hqj0ec.apps.googleusercontent.com">
         <Provider store={store}>
           <App />
         </Provider>
       </GoogleOAuthProvider>
-    </TourSearchContextProvider>
   </React.StrictMode>
 );

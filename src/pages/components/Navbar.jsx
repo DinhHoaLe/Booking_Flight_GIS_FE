@@ -208,34 +208,20 @@ function Navbar() {
           <a>Deals</a>
         </div>
         <div
-          className={`middle ${
-            pathname === "/trip" ? "active" : ""
-          }  cursor-pointer`}
-        >
-          <a>Trip</a>
-        </div>
-        <div
           onClick={() => navigate("/")}
           className={`middle ${
             pathname === "/" || pathname === "/" ? "active" : ""
           }  cursor-pointer`}
         >
-          <a>Hotel</a>
+          <a>Flight</a>
         </div>
-        <div
+        {/* <div
           onClick={() => navigate("/flight-home-page")}
           className={`middle ${
             pathname === "/flight-home-page" ? "active" : ""
           }  cursor-pointer`}
         >
           <a>Flight</a>
-        </div>
-        {/* <div
-          className={`middle ${
-            pathname === "/cab" ? "active" : ""
-          }  cursor-pointer`}
-        >
-          <a>Cab</a>
         </div> */}
         <div
           className={`middle ${
