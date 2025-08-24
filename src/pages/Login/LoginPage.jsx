@@ -19,7 +19,7 @@ import imgEN from "./img/EN.png";
 import { useDispatch, useSelector } from "react-redux";
 import { GoogleLogin } from "@react-oauth/google";
 import { useGoogleLogin } from "@react-oauth/google";
-import FacebookLogin from "react-facebook-login";
+// import FacebookLogin from "react-facebook-login";
 import ChatBox from "../ChatPage/ChatBox";
 
 const { Header, Content } = Layout;
