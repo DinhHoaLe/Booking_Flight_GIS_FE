@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:3000/api/v1";
-// const BASE_URL = "https://booking-be-z8l2.onrender.com/api/v1";
+// const BASE_URL = "http://localhost:3000/api/v1";
+const BASE_URL = "https://booking-be-z8l2.onrender.com/api/v1";
 
 const accessToken = localStorage.getItem("accessToken");
 let refreshToken = localStorage.getItem("refreshToken");
