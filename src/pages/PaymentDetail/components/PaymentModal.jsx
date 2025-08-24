@@ -26,7 +26,7 @@ const style = {
   left: "50%",
   width: "1000px",
   transform: "translate(-50%, -50%)",
-  width: "60%",
+  // width: "60%",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -104,27 +104,27 @@ const style = {
         });
       }
 
-      const handleData = {
-        ...values,
-        objectType: "hotel",
-        objectId: data?._id,
-        totalPersons:
-          JSON.parse(localStorage.getItem("hotelPassengers")).passengers +
-          (Number(searchData?.children) || 0),
-        totalAmount: handleTotalAmount(),
-        bookingStartDate: JSON.parse(localStorage.getItem("checkoutTime"))
-          .checkin,
-        bookingEndDate: JSON.parse(localStorage.getItem("checkoutTime"))
-          .checkout,
-        totalAmount:
-          JSON.parse(localStorage?.getItem("currentPrice")) *
-          JSON.parse(localStorage.getItem("hotelPassengers")).passengers *
-          utils.convertDate(
-            JSON.parse(localStorage.getItem("checkoutTime")).checkin,
-            JSON.parse(localStorage.getItem("checkoutTime")).checkout
-          ) *
-          23000,
-      };
+      // const handleData = {
+      //   ...values,
+      //   objectType: "hotel",
+      //   objectId: data?._id,
+      //   totalPersons:
+      //     JSON.parse(localStorage.getItem("hotelPassengers")).passengers +
+      //     (Number(searchData?.children) || 0),
+      //   // totalAmount: handleTotalAmount(),
+      //   bookingStartDate: JSON.parse(localStorage.getItem("checkoutTime"))
+      //     .checkin,
+      //   bookingEndDate: JSON.parse(localStorage.getItem("checkoutTime"))
+      //     .checkout,
+      //   totalAmount:
+      //     JSON.parse(localStorage?.getItem("currentPrice")) *
+      //     JSON.parse(localStorage.getItem("hotelPassengers")).passengers *
+      //     utils.convertDate(
+      //       JSON.parse(localStorage.getItem("checkoutTime")).checkin,
+      //       JSON.parse(localStorage.getItem("checkoutTime")).checkout
+      //     ) *
+      //     23000,
+      // };
 
       const responseBooking = await apiPost("create-booking", handleData);
 
