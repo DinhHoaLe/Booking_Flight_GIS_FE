@@ -7,11 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-      "postinstall": "npm install rollup@4.13.0 --force"
+    "preview": "vite preview"
   },
   "dependencies": {
-      "rollup": "4.13.0",
     "@arcgis/core": "^4.32.10",
     "@bradgarropy/use-countdown": "^2.0.1",
     "@emailjs/browser": "^4.4.1",
@@ -92,6 +90,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.4.39",
+    "rollup": "^4.13.0",
     "tailwindcss": "^3.4.6",
     "vite": "^5.3.4"
   }
